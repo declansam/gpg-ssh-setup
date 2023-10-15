@@ -18,3 +18,13 @@ https://superuser.com/questions/624343/keep-gnupg-credentials-cached-for-entire-
 - Type "~/.gnupg/"
 - Navigate to -> gpg-agent.conf
 - Change Time (in seconds)
+- gpgconf --kill gpg-agent
+<br> <br>
+
+If: 
+>   error: gpg failed to sign the data <br> 
+>   fatal: failed to write commit object
+
+Then: <br> 
+- gpgconf --kill all
+- gpg-agent --daemon
