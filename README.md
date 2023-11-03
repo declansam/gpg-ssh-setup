@@ -36,3 +36,10 @@ Then: <br>
 ## Debugging: <br>
 
 `echo "test"| gpg --clearsign` 
+
+If: 
+> Inappropriate ioctl for device
+
+Then: <br>
+<br> 
+  Add `export GPG_TTY=$(tty)` to the `~/.bash_profile` file.
