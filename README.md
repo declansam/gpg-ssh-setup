@@ -43,3 +43,8 @@ If:
 Then: <br>
 <br> 
   Add `export GPG_TTY=$(tty)` to the `~/.bash_profile` file.
+
+<br>
+
+[Stackoverflow](https://stackoverflow.com/questions/41052538/git-error-gpg-failed-to-sign-data)
+[GitHub](https://gist.github.com/paolocarrasco/18ca8fe6e63490ae1be23e84a7039374)
