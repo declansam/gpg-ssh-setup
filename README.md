@@ -9,6 +9,8 @@ Setup GPG Verification & Set Passphrase Cache Limit <br> <br>
 <br>
 [YouTube](https://www.youtube.com/watch?v=u9L5kDlU8rs&t=907s)
 
+
+
 <br>
 
 ## TimeLimit:
@@ -19,9 +21,10 @@ Setup GPG Verification & Set Passphrase Cache Limit <br> <br>
 - Type `~/.gnupg/`
 - Navigate to -> `gpg-agent.conf`
 - Change Time (in seconds)
-- `gpgconf --kill gpg-agent`
+- `gpgconf --kill gpg-agent`  
 <br> <br>
 
+## Can't Sign The Data: <br>
 If: 
 >   error: gpg failed to sign the data <br> 
 >   fatal: failed to write commit object
@@ -31,7 +34,16 @@ Then: <br>
 - `gpg-agent --daemon`
 
 <br>
-<br> 
+
+### Step: <br> 
+- Run: `brew install pinentry-mac`
+- CMD + SHIFT + G
+- Type `~/.gnupg/`
+- Navigate to -> `gpg-agent.conf`
+- Add `pinentry-program /opt/homebrew/bin/pinentry-mac`
+- Navigate to -> `gpg.conf`
+- Add `use-agent`
+[More Here](https://gist.github.com/phortuin/cf24b1cca3258720c71ad42977e1ba57) <br> <br>
 
 ## Debugging: <br>
 
