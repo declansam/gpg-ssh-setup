@@ -16,7 +16,9 @@ NOTE: I generally prefer to generate new key for new device/ purpose.
 ssh-keygen -t ed25519 -C "email@email.com"
 ```
 
-> NOTE: Keep email in `" "`
+> NOTE: 
+> 1. Keep email in `" "` <br>
+> 2. Refer to [description.md](./description.md) for a detailed explanation of the command.
 
 <br>
 
@@ -37,6 +39,9 @@ Add your SSH private key (i.e. file without `.pub`)
 ```bash
 ssh-add ~/.ssh/id_ed25519_filename
 ```
+
+> NOTE:  <br>
+> Refer to [description.md](./description.md) for a detailed explanation of the command.
 
 ## Step 4: Copy your public key
 
