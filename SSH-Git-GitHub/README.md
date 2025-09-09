@@ -103,8 +103,9 @@ Then do the following: <br>
 - If it already exists, add the key to the SSH agent (i.e. Step 3):
 
     ```
-    sh-add ~/.ssh/id_ed25519_name
+    ssh-add ~/.ssh/id_ed25519_name
     ```
+    (Here, you have to enter the passphrase used to create the key!)
 - Test the connection (i.e. Step 6):
 
     ```
