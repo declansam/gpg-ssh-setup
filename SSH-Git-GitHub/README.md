@@ -87,6 +87,30 @@ git clone git@github.com:username/repository.git
 
 That's it! You can now clone, push, and pull without entering your password each time. Your new Ed25519 key will work for all GitHub operations without needing to enter passwords.
 
+## Debugging
+While doing `git clone/ git push`, if you get the following error:
+```
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
+Then do the following: <br>
+- `ls -al ~/.ssh` -> Ensure `id_ed25519_name.pub` exists
+- If `.pub` file does not exist, generate a new one (follow Step 1-6)
+- If it already exists, add the key to the SSH agent (i.e. Step 3):
+
+    ```
+    sh-add ~/.ssh/id_ed25519_name
+    ```
+- Test the connection (i.e. Step 6):
+
+    ```
+    ssh -T git@github.com
+    ```
+
 ## Why Ed25519 is better than RSA
 
 **Ed25519 advantages:**
